@@ -61,6 +61,22 @@ def template3(request, nombre, apellido, edad):
     
     return HttpResponse(template_renderizado)
 
+def template4(request, nombre, apellido, edad):
+      
+    
+    fecha = datetime.now()
+    
+    datos = {
+            "fecha":fecha,
+             "nombre":nombre,
+             "apellido":apellido,
+             "edad":edad,
+             }
+    
+    
+    return render(request,"template2.html", datos)
+
+
 
 
 
