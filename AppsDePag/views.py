@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
 from django.template import Template, Context, loader
+import random
 
 
 
@@ -75,6 +76,17 @@ def template4(request, nombre, apellido, edad):
     
     
     return render(request,"template.html", datos)
+
+def probando(request):
+    
+    lista = list(range(500))
+       
+    numeros = random.choices(lista, k=50)
+    
+    print(numeros)
+       
+    return render(request, "probando_if_for.html", {"numeros": numeros})
+
 
 
 
