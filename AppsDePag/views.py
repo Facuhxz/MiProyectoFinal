@@ -16,7 +16,7 @@ def template1(request, nombre, apellido, edad):
 
 def template2(request, nombre, apellido, edad):
     
-    archivo_abierto = open(r"C:\Users\Facuhxz'\Desktop\Visual Studio Code\MiEntregaFinal\AppsDePag\templates\template2.html")
+    archivo_abierto = open(r"C:\Users\Facuhxz'\Desktop\Visual Studio Code\MiEntregaFinal\AppsDePag\templates\template.html")
     # archivo_abierto = open("\templates\template2.html")
     
     template = Template(archivo_abierto.read())
@@ -43,7 +43,7 @@ def template2(request, nombre, apellido, edad):
 
 def template3(request, nombre, apellido, edad):
       
-    template = loader.get_template("template2.html")
+    template = loader.get_template("template.html")
     
     fecha = datetime.now()
     
@@ -74,7 +74,7 @@ def template4(request, nombre, apellido, edad):
              }
     
     
-    return render(request,"template2.html", datos)
+    return render(request,"template.html", datos)
 
 
 
