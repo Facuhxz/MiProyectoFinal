@@ -4,11 +4,14 @@ from django.http import HttpResponse
 from datetime import datetime
 from django.template import Template, Context, loader
 import random
+from AppsDePag.models import MotherBoard
 
 
 
 def inicio(request):
-    return HttpResponse("Bienvenidos a mi INICIO!")
+    # return HttpResponse("Bienvenidos a mi INICIO!")
+    
+    return render(request, "AppsDePag/index.html")
 
 def template1(request, nombre, apellido, edad):
     fecha = datetime.now()
@@ -86,6 +89,14 @@ def probando(request):
     print(numeros)
        
     return render(request, "probando_if_for.html", {"numeros": numeros})
+
+def creacion_de_mother(request, modelo, marca):
+    
+    mother = MotherBoard(modelo=modelo, marca=marca)
+    
+    mother.save()
+    
+    return render(request, "mothers.template/template_mother.html", {"mother": mother})
 
 
 

@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class MotherBoard(models.Model):
+    modelo = models.CharField(max_length=25)
+    marca = models.CharField(max_length=25)
