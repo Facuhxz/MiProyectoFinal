@@ -20,7 +20,7 @@ def template1(request, nombre, apellido, edad):
 
 def template2(request, nombre, apellido, edad):
     
-    archivo_abierto = open(r"C:\Users\Facuhxz'\Desktop\Visual Studio Code\MiEntregaFinal\AppsDePag\templates\template.html")
+    archivo_abierto = open(r"C:\Users\Facuhxz'\Desktop\Visual Studio Code\MiEntregaFinal\templates\template.html")
     # archivo_abierto = open("\templates\template2.html")
     
     template = Template(archivo_abierto.read())

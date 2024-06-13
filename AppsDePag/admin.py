@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from AppsDePag.models import MotherBoard
+
+
+admin.site.register(MotherBoard)
+
+
+
