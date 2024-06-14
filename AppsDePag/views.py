@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render   
 
 from django.http import HttpResponse
 from datetime import datetime
 from django.template import Template, Context, loader
 import random
 from AppsDePag.models import MotherBoard
+from AppsDePag.forms import FormularioMother
 
 
 
@@ -98,6 +99,32 @@ def creacion_de_mother(request, modelo, marca):
     
     return render(request, "mothers.template/template_mother.html", {"mother": mother})
 
+def creacion_de_mother_v2(request):
+    
+    # v1
+    # if request.method == "POST":
+    #     mother = MotherBoard(modelo=request.POST.get("Modelo"), marca=request.POST.get("Marca"))
+    #     mother.save()
+    
+    # return render(request, "AppsDePag/crear_mother_v2.html")
+    
+    
+    # v2
+    if request.method == "POST":
+        
+        ...
+        # mother = MotherBoard(modelo=request.POST.get("Modelo"), marca=request.POST.get("Marca"))
+        # mother.save()
+    
+    formulario = FormularioMother()    
+    
+    return render(request, "AppsDePag/crear_mother_v2.html", {"formulario": formulario})
+    
+        
+    
+        
+        
+    
 
 
 

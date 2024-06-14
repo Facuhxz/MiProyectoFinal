@@ -8,7 +8,9 @@ urlpatterns = [
     path("template3/<str:nombre>/<str:apellido>/<int:edad>", views.template3),
     path("probar/<str:nombre>/<str:apellido>/<int:edad>", views.template4, name="Prueba2"),
     path("probando/", views.probando),
-    path("creacion/creacion/<str:modelo>/<str:marca>", views.creacion_de_mother, name="crear"),
-    
+    # V1
+    # path("creacion/creacion/<str:modelo>/<str:marca>", views.creacion_de_mother, name="crear"),
+    # V2
+    path("crear/mother/", views.creacion_de_mother_v2, name="crearV2")
 ]
 
